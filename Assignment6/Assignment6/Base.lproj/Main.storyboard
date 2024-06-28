@@ -24,13 +24,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v9o-TR-3GQ">
-                                <rect key="frame" x="116.66666666666669" y="303" width="160" height="246.33333333333337"/>
+                                <rect key="frame" x="87" y="282" width="219" height="288.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eX8-iE-PYW">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="202"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="219" height="244"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0my-PT-ega">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="219" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Enter USD:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrX-dH-Kxs">
                                                         <rect key="frame" x="0.0" y="6.6666666666666838" width="83.666666666666671" height="20.333333333333329"/>
@@ -39,14 +39,23 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WrV-IO-lx6">
-                                                        <rect key="frame" x="93.666666666666686" y="0.0" width="66.333333333333314" height="34"/>
+                                                        <rect key="frame" x="93.666666666666657" y="0.0" width="125.33333333333334" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <action selector="openKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GWA-C3-QvG"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD Amount Must Be An Int!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWd-Ng-qi5">
+                                                <rect key="frame" x="0.0" y="42" width="219" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="HNM-u8-Cog">
-                                                <rect key="frame" x="0.0" y="42" width="160" height="34"/>
+                                                <rect key="frame" x="0.0" y="84" width="160" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAD:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shg-hS-mYZ">
                                                         <rect key="frame" x="0.0" y="6.6666666666666838" width="61" height="20.333333333333329"/>
@@ -66,7 +75,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="HCu-Y7-jIA">
-                                                <rect key="frame" x="0.0" y="84" width="160" height="34"/>
+                                                <rect key="frame" x="0.0" y="126" width="160" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yen:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWH-QH-D6z">
                                                         <rect key="frame" x="0.0" y="6.6666666666666838" width="62" height="20.333333333333329"/>
@@ -86,7 +95,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ZH4-lE-MwX">
-                                                <rect key="frame" x="0.0" y="126" width="160" height="34"/>
+                                                <rect key="frame" x="0.0" y="168" width="160" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Euros:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMJ-cX-zpK">
                                                         <rect key="frame" x="0.0" y="6.6666666666666838" width="61" height="20.333333333333329"/>
@@ -106,7 +115,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="5HC-ML-McZ">
-                                                <rect key="frame" x="0.0" y="168" width="160" height="34"/>
+                                                <rect key="frame" x="0.0" y="210" width="160" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pounds:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKi-PB-u7i">
                                                         <rect key="frame" x="0.0" y="6.6666666666666838" width="62" height="20.333333333333329"/>
@@ -131,7 +140,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l10-Pa-EIW">
-                                        <rect key="frame" x="0.0" y="212" width="160" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="254.00000000000003" width="219" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Convert">
                                             <backgroundConfiguration key="background">
@@ -164,6 +173,7 @@
                     </view>
                     <connections>
                         <outlet property="USDAmount" destination="WrV-IO-lx6" id="qMl-ac-LvC"/>
+                        <outlet property="errorMessage" destination="HWd-Ng-qi5" id="NK9-D5-YHL"/>
                         <segue destination="qRO-Ri-OZN" kind="presentation" identifier="toConvertedAmounts" id="7Kz-zQ-zUB"/>
                     </connections>
                 </viewController>
@@ -316,6 +326,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

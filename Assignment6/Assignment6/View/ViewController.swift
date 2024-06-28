@@ -15,11 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var CThree: UISwitch!
     @IBOutlet weak var CFour: UISwitch!
     @IBOutlet weak var convertButton: UIButton!
+    @IBOutlet weak var errorMessage: UILabel!
     
     var converterLogic = ConverterLogic()
     
     var stringUSD = ""
-    var floatUSD : Float = 0.0
+    var intUSD : Int? = 0
     var convertedCAD = ""
     var convertedYen = ""
     var convertedEuros = ""
@@ -58,12 +59,19 @@ class ViewController: UIViewController {
         formatter.maximumFractionDigits = 2
         
         stringUSD = USDAmount.text!
-        floatUSD = formatter.number(from: stringUSD)!.floatValue
+        intUSD = Int(stringUSD)
         
-        convertedCAD = converterLogic.convertCAD(floatUSD)
-        convertedYen = converterLogic.convertYen(floatUSD)
-        convertedEuros = converterLogic.convertEuros(floatUSD)
-        convertedPounds = converterLogic.convertPounds(floatUSD)
+        if intUSD == nil {
+            errorMessage.alpha = 1.0
+            return
+        } else {
+            errorMessage.alpha = 0.0
+        }
+        
+        convertedCAD = converterLogic.convertCAD(intUSD!)
+        convertedYen = converterLogic.convertYen(intUSD!)
+        convertedEuros = converterLogic.convertEuros(intUSD!)
+        convertedPounds = converterLogic.convertPounds(intUSD!)
         
         self.performSegue(withIdentifier: "toConvertedAmounts", sender: self)
     }
@@ -71,7 +79,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toConvertedAmounts" {
             let navigation = segue.destination as! ConvertedViewController
-            navigation.amountUSD = floatUSD
+            navigation.amountUSD = intUSD!
             navigation.amountCAD = convertedCAD
             navigation.amountYen = convertedYen
             navigation.amountEuros = convertedEuros

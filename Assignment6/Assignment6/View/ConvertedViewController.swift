@@ -15,7 +15,7 @@ class ConvertedViewController: UIViewController {
     @IBOutlet weak var EuroLabel: UILabel!
     @IBOutlet weak var PoundLabel: UILabel!
     
-    var amountUSD : Float = 0.0
+    var amountUSD : Int = 0
     var stringUSD = ""
     var amountCAD = ""
     var amountYen = ""
